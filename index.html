@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson 03</title>
+	
+</head>
+<body>
+	
+	<script>
+		;(function(){
+					
+		function simpleNumbers(start = 0, end = 99999) {
+
+			var number;
+			var counter;
+
+			if (end <= start) {
+					return null;
+				}
+
+			for (number = start; number <= end; number++) {
+				for (counter = 2; counter < number; counter++) {
+					if (number % counter == 0) break;
+					}
+				if (counter == number) console.log(number);
+			}
+		}
+
+		var number1 = Number(prompt("Please, enter first number:"));
+		var number2 = Number(prompt("Please, enter second number. Second number should be bigger than first!"));
+			
+		simpleNumbers(number1, number2)
+	
+
+	})();
+
+	</script>
+
+	
+</body>
+</html>
